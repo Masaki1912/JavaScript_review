@@ -69,13 +69,13 @@ sayWord = function() {
 sayWord();
 
 
-//Q7 メソッド　解きなおし
+//Q7 メソッド 解きなおし
 user.birthday = '2000-09-27';
 user.sayHello = function() {
-  console.log('Hello')
+  console.log('sayhelloメソッド')
 };
 
-sayHello();
+user.sayHello();
 
 
 //Q8
@@ -100,31 +100,31 @@ let calc = {
     console.log(divide);
   }
 };
-//定義の引数と実行時の引数
+//定義時の引数（仮引数）と実行時の引数（実引数）
 calc.add(3,4);
 calc.subtract(20,10);
 calc.multiply(7,7);
 calc.divide(25,5);
 
 
-//Q9
+//Q9!!!push
+let x = 5;
+let y = 3;
+
 function remainder(x,y) {
-  let remainder = x % y;
-  console.log(x + 'を' + y + 'で割った余りは' + remainder + 'です。');
-  return remainder
+  return x % y;
 };
 
-console.log(remainder(5,3));
+console.log(x + 'を' + y + 'で割った余りは' + remainder(x,y) + 'です。');
 
 
 //Q10
 //[回答]xの変数のスコープ(有効範囲)が｛｝の関数内のみのためエラーが発生、事前に関数外に紐づいている変数を定義すれば関数の中からでも参照することが可能となる。
 
 
-//Q2-1
+//Q2-1!!!説明をもっとわかりやすく！！！
 let random = Math.floor(Math.random() * 10);
 console.log(random);
-
 
 //Q2-2
 setTimeout(function() {
@@ -139,7 +139,7 @@ if (num > 0) {
   console.log('num is greater than 0');
 } else if (num < 0) {
   console.log('num is less than 0');
-} else if (num === 0) {
+} else {
   console.log('num is 0');
 }
 
@@ -155,9 +155,9 @@ console.log(numbers);
 //Q2-5
 let mixed = [4, '2', 5, '8', '9', 0, 1];
   for (let i = 0; i < mixed.length; i++) {
-    let numbers = mixed[i];
-    if (typeof numbers === 'number') {
-      if ( numbers % 2 === 0) {
+    let element = mixed[i];
+    if (typeof element === 'number') {
+      if ( element % 2 === 0) {
         console.log('even');
       } else {
         console.log('odd');
