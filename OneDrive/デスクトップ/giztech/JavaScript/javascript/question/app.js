@@ -1,18 +1,24 @@
 //Q1
 let nickname ='ごっしー';
-let age = '28';
+let age = 28;
 let greet ='私のニックネームは' + nickname + 'です。' + '年齢は' + age + '歳です。'
 
 console.log(greet); 
 
 
-//Q2
-let names = ['JavaScript','PHP','Ruby','Python','Go'];
+//Q2//配列の番号(インデックス),配列型の英語版（array）
+let names = [
+  'JavaScript',
+  'PHP',
+  'Ruby',
+  'Python',
+  'Go'
+]; 
 
-console.log('私の好きな言語は' + names[0] + 'です。次は' + names[3] + 'を勉強してみたいです。');
+console.log(`私の好きな言語は${names[0]}です。次は${names[3]} を勉強してみたいです。`);
 
 
-//Q3
+//Q3//キーとバリューのセット(プロパティ)
 let user = {
   name: 'John',
   age: 26,
@@ -58,16 +64,18 @@ function sayHello() {
 sayHello();
 
 sayWord = function() {
-  console.log('Word');
+  console.log('World');
 }
 sayWord();
 
 
-//Q7
-user['birthday'] = '2000-09-27';
-user['sayHello'] = 'Hello';
+//Q7 メソッド　解きなおし
+user.birthday = '2000-09-27';
+user.sayHello = function() {
+  console.log('Hello')
+};
 
-console.log('sayHello');
+sayHello();
 
 
 //Q8
@@ -92,7 +100,7 @@ let calc = {
     console.log(divide);
   }
 };
-
+//定義の引数と実行時の引数
 calc.add(3,4);
 calc.subtract(20,10);
 calc.multiply(7,7);
@@ -102,7 +110,8 @@ calc.divide(25,5);
 //Q9
 function remainder(x,y) {
   let remainder = x % y;
-  return x + 'を' + y + 'で割った余りは' + remainder + 'です。'
+  console.log(x + 'を' + y + 'で割った余りは' + remainder + 'です。');
+  return remainder
 };
 
 console.log(remainder(5,3));
@@ -125,7 +134,7 @@ setTimeout(function() {
 
 
 //Q2-3
-let num = 0; {
+let num = 0;
 if (num > 0) {
   console.log('num is greater than 0');
 } else if (num < 0) {
@@ -133,14 +142,14 @@ if (num > 0) {
 } else if (num === 0) {
   console.log('num is 0');
 }
-};
 
 
 //Q2-4
 let numbers = [];
-for (let numbers = 0; numbers < 100; numbers++) {
-  console.log(numbers);
+for (let i = 0; i < 100; i++) {
+  numbers.push(i)
 };
+console.log(numbers);
 
 
 //Q2-5
